@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Overlock');
+body {
+	background: #643a7a;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.6);
+	/* background-image: linear-gradient(to top, #40334f, #2f273c, #272232, #201c29); */
+  /* color: #4b384c; */
+  font-family: 'overlock', Helvetica, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+.front {
+  position: absolute;
+  z-index: 10;
+  width: 400px;
+  height: 140px;
+  left: 0;
+  bottom: -53px;
+  background: #fff;
+	box-shadow: -1rem 0 1rem rgba(0, 0, 0, .5);
+	animation: slide 1s;
+	transition: 1s ease-in-out;
+	z-index: 1000;
+	&:hover {
+		bottom: 0;
+	}
+}
+
+@keyframes slide {
+	0%, 45% {
+		transform: translateY(90px);
+	}
+	to {
+		transform: translateY(0px);
+	}
+}
+
+.front .temperature {
+  float: left;
+  margin-left: 20px;
+  font-size: 45px;
+  line-height: 90px;
+}
+.front .info {
+  float: left;
+  margin: 0 0 0 1rem;
+  font-size: 1.2rem;
+  line-height: 20px;
+}
+.icons {
+	position: absolute;
+	top: 2rem;
+	left: 7rem;
+	line-height: 20px;
+}
+.front .preview {
+  float: right;
+  font-weight: 400;
+  text-align: right;
+  font-size: 1.2rem;
+  line-height: 20px;
+  margin: 0 100px 0 0;
+}
+.front .preview td {
+  padding: 0 3px;
+  text-transform: uppercase;
+}
+
+@keyframes drop {
+  0% {
+            transform: translate3d(40px, -320px, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+  85% {
+            transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+  100% {
+            transform: translate3d(0, 0, 0) scaleX(3) scaleY(0) rotate(0deg);
+  }
+}
+@keyframes rise {
+  from {
+            transform: translate(-40px, 20px);
+  }
+  to {
+            transform: translate(0, 0px);
+  }
+}
